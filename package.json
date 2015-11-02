@@ -12,6 +12,7 @@
     "node": "5.0.*"
   },
   "dependencies": {
+    "body-parser": "latest",
     "express": "4.13.*",
     "lodash": "latest"
   },
