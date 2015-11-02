@@ -20,7 +20,7 @@
     });
 
     app.post('/', function (req, res) {
-        console.log(req.body, req.query, req);
+        console.log(req.body);
         res.status(200).send();
     });
 })();
