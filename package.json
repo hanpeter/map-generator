@@ -14,5 +14,9 @@
   "dependencies": {
     "express": "4.13.*",
     "lodash": "latest"
+  },
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/hanpeter/map-generator"
   }
 }
