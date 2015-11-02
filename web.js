@@ -16,7 +16,7 @@
     });
 
     app.post('/', function (req, res) {
-        console.log(req.body);
+        console.log(req.body, req.query, req);
         res.status(200).send();
     });
 })();
