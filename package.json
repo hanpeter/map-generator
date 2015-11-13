@@ -17,11 +17,21 @@
     "body-parser": "latest",
     "bootstrap": "3.3.*",
     "express": "4.13.*",
-    "jquery": "^2.1.4",
+    "jquery": "latest",
     "lodash": "latest"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/hanpeter/map-generator"
+  },
+  "devDependencies": {
+    "gulp": "latest",
+    "browserify": "latest",
+    "browserify-shim": "latest",
+    "vinyl-source-stream": "latest",
+    "vinyl-buffer": "latest",
+    "gulp-uglify": "latest",
+    "gulp-sourcemaps": "latest",
+    "gulp-util": "latest"
   }
 }
