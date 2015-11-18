@@ -30,8 +30,10 @@
     "browserify-shim": "latest",
     "vinyl-source-stream": "latest",
     "vinyl-buffer": "latest",
+    "vinyl-paths": "latest",
     "gulp-uglify": "latest",
     "gulp-sourcemaps": "latest",
-    "gulp-util": "latest"
+    "gulp-util": "latest",
+    "del": "latest"
   }
 }
