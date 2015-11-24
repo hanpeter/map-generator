@@ -1,8 +1,6 @@
 'use strict';
 
-//angular = require('angular');
-
-App = angular.module('App', []);
+var App = angular.module('App', []);
 App.controller('AppController', require('./controllers/AppController.js'));
 App.controller('ListController', require('./controllers/ListController.js'));
 
