@@ -8,4 +8,4 @@ var controller = function ($scope) {
 
 controller.$inject = ['$scope'];
 
-module.export = controller;
+module.exports = controller;
