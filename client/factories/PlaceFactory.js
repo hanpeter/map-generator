@@ -6,6 +6,9 @@ var factory = function ($http) {
             return $http({
                 url: '/places',
                 method: 'GET'
+            })
+            .then(function (res) {
+                return res.data;
             });
         },
         updatePlace: function (place) {
