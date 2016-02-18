@@ -11,11 +11,11 @@ var factory = function ($http) {
                 return res.data;
             });
         },
-        updatePlace: function (place) {
+        updatePlace: function (places) {
             return $http({
                 url: '/places',
                 method: 'POST',
-                data: place
+                data: places
             });
         }
     }

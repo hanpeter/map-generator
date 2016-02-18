@@ -18,7 +18,6 @@
     });
 
     var db = require('./db.js')();
-    console.log(db);
     app.param('place_id', function (req, res, next, value) {
         if (req.body && req.body.id !== value) {
             res.status(401).send('IDs do not match');
@@ -33,9 +32,11 @@
     });
     app.post('/places', function (req, res) {
         console.log(req.body);
+        res.send();
     });
     app.post('/places/:place_id', function (req, res) {
         console.log(req.body);
         db.update(req.body);
+        res.send();
     });
 })();
