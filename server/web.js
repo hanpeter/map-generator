@@ -19,15 +19,19 @@
 
     var db = require('./db.js')();
     app.param('place_id', function (req, res, next, value) {
-        if (req.body && req.body.id !== value) {
+        value = parseInt(value)
+        if (req.body.id !== undefined && req.body.id !== value) {
             res.status(401).send('IDs do not match');
+        }
+        else {
+            next();
         }
     });
     app.get('/places', function (req, res) {
         res.json(db.getAll());
     });
     app.get('/places/:place_id', function (req, res) {
-        console.log(arguments[2], arguments[3], arguments[4]);
+        console.log(arguments);
         res.json();
     });
     app.post('/places', function (req, res) {
@@ -35,7 +39,7 @@
         res.send();
     });
     app.post('/places/:place_id', function (req, res) {
-        console.log(req.body);
+        console.log('single update', req.body.id);
         db.update(req.body);
         res.send();
     });
