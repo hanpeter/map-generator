@@ -35,7 +35,7 @@
         res.json(req.place);
     });
     app.post('/places', function (req, res) {
-        console.log(req.body);
+        db.create(req.body);
         res.send();
     });
     app.put('/places/:place_id', function (req, res) {
