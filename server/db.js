@@ -36,6 +36,10 @@
             },
             update: function (place) {
                 var old = data[place.id - 1];
+
+                if (!old) {
+                    throw Error('There is no place with the given ID. Try creating the place instead.');
+                }
                 _.assign(old, place);
 
                 return _.clone(old, true);
