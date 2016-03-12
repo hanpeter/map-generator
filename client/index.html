@@ -29,7 +29,13 @@
                     </div>
                 </div>
             </nav>
-            <div ng-view></div>
+            <div ng-controller="ListController" ng-cloak>
+                <ul>
+                    <li ng-repeat="place in places">
+                        <a ng-href="{{place.yelp}}">{{place.name}}</a>
+                    </li>
+                </ul>
+            </div>
         </main>
 
         <!-- Libraries -->

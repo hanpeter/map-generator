@@ -1,18 +1,11 @@
 'use strict';
 
-var controller = function ($scope, PlaceFactory) {
+var controller = function ($scope) {
     _.extend($scope, {
 
     });
-
-    PlaceFactory.getPlaces()
-        .then(function (places) {
-            console.log(places);
-
-            PlaceFactory.updatePlace(places[0]);
-        });
 };
 
-controller.$inject = ['$scope', 'PlaceFactory'];
+controller.$inject = ['$scope'];
 
 module.exports = controller;
