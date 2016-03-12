@@ -24,6 +24,7 @@
             res.status(401).send('IDs do not match');
         }
         else {
+            req.place = db.get(value)
             next();
         }
     });
@@ -31,8 +32,7 @@
         res.json(db.getAll());
     });
     app.get('/places/:place_id', function (req, res) {
-        console.log(arguments);
-        res.json();
+        res.json(req.place);
     });
     app.post('/places', function (req, res) {
         console.log(req.body);
