@@ -30,11 +30,44 @@
                 </div>
             </nav>
             <div ng-controller="ListController" ng-cloak>
-                <ul>
-                    <li ng-repeat="place in places">
-                        <a ng-href="{{place.yelp}}">{{place.name}}</a>
-                    </li>
-                </ul>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Name</th>
+                            <th>Start Time</th>
+                            <th>End Time</th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="place in places">
+                            <td>{{place.id}}</td>
+                            <td>
+                                <a ng-href="{{place.yelp}}">{{place.name}}</a>
+                            </td>
+                            <td>{{place.starttime}}</td>
+                            <td>{{place.endtime}}</td>
+                            <td>
+                                <a class="label label-default" ng-repeat="tag in place.tags" ng-href="#">
+                                    {{tag}}
+                                </a>
+                            </td>
+                            <td>
+                                <button class="btn btn-default">
+                                    <span class="glyphicon glyphicon-globe"></span>
+                                </button>
+                            </td>
+                            <td>
+                                <button class="btn btn-default">
+                                    <span class="glyphicon glyphicon-pencil"></span>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </main>
 
