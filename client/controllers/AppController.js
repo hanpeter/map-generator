@@ -2,7 +2,7 @@
 
 var controller = function ($scope) {
     _.extend($scope, {
-
+        appName: 'Vacation Planner'
     });
 };
 
