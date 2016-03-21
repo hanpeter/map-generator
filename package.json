@@ -5,9 +5,9 @@
   "license": "ISC",
   "main": "web.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo 'Error: no test specified' && exit 1",
     "start": "node server/web.js",
-    "prepublish": "gulp production"
+    "postinstall": "gulp ${NODE_ENV:-'production'}"
   },
   "engines": {
     "node": "5.8.*"
@@ -19,20 +19,20 @@
     "bootstrap": "3.3.*",
     "express": "4.13.*",
     "jquery": "latest",
-    "lodash": "latest"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/hanpeter/map-generator"
-  },
-  "devDependencies": {
+    "lodash": "latest",
     "gulp": "latest",
     "browserify": "latest",
     "vinyl-source-stream": "latest",
     "vinyl-buffer": "latest",
     "gulp-uglify": "latest",
     "gulp-sourcemaps": "latest",
-    "del": "latest",
+    "del": "latest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hanpeter/map-generator"
+  },
+  "devDependencies": {
     "nodemon": "latest"
   }
 }

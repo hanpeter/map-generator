@@ -22,15 +22,15 @@ gulp.task('browserify', ['clean-dist'], function () {
         .bundle()
         .pipe(source('app.js'))
         .pipe(buffer())
-        .pipe(gulp.dest('./client/dist/build/'));
+        .pipe(gulp.dest('./client/dist/'));
 });
 
 gulp.task('uglify', ['browserify'], function () {
-    return gulp.src('./client/dist/build/app.js')
+    return gulp.src('./client/dist/app.js')
         .pipe(sourcemaps.init({ loadMaps: true }))
         .pipe(uglify())
         .pipe(sourcemaps.write('./'))
-        .pipe(gulp.dest('./client/dist/build/'));
+        .pipe(gulp.dest('./client/dist/'));
 });
 
 gulp.task('default', ['browserify']);
