@@ -4,10 +4,8 @@ var gulp = require('gulp');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
-var vinylPaths = require('vinyl-paths');
 var uglify = require('gulp-uglify');
 var sourcemaps = require('gulp-sourcemaps');
-var gutil = require('gulp-util');
 var del = require('del');
 
 gulp.task('clean-dist', function () {
@@ -35,16 +33,6 @@ gulp.task('uglify', ['browserify'], function () {
         .pipe(gulp.dest('./client/dist/build/'));
 });
 
-function deploy() {
-    return gulp.src('./client/dist/build/*')
-        .pipe(vinylPaths(del))
-        .pipe(gulp.dest('./client/dist/'));
-}
+gulp.task('default', ['browserify']);
 
-gulp.task('default', ['browserify'], function () {
-    return deploy();
-});
-
-gulp.task('production', ['browserify', 'uglify'], function () {
-    return deploy();
-});
+gulp.task('production', ['uglify']);

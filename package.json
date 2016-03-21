@@ -6,10 +6,11 @@
   "main": "web.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server/web.js"
+    "start": "node server/web.js",
+    "prepublish": "gulp production"
   },
   "engines": {
-    "node": "5.0.*"
+    "node": "5.8.*"
   },
   "dependencies": {
     "angular": "1.4.7",
@@ -27,13 +28,10 @@
   "devDependencies": {
     "gulp": "latest",
     "browserify": "latest",
-    "browserify-shim": "latest",
     "vinyl-source-stream": "latest",
     "vinyl-buffer": "latest",
-    "vinyl-paths": "latest",
     "gulp-uglify": "latest",
     "gulp-sourcemaps": "latest",
-    "gulp-util": "latest",
     "del": "latest",
     "nodemon": "latest"
   }
