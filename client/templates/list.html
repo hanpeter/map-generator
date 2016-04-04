@@ -20,7 +20,7 @@
                 <td>{{place.starttime}}</td>
                 <td>{{place.endtime}}</td>
                 <td>
-                    <a class="label label-default" ng-repeat="tag in place.tags" ng-href="#">
+                    <a class="label label-info" ng-repeat="tag in place.tags" ng-href="#">
                         {{tag}}
                     </a>
                 </td>
@@ -70,7 +70,7 @@
                         <div class="form-group">
                             <label for="tags" class="col-sm-3 control-label">Tags</label>
                             <div class="col-sm-9">
-                                <input type="text" name="tags" id="tags" class="form-control" placeholder="" ng-model="editPlace.tags" />
+                                <select class="form-control" ng-model="editPlace.tags" ng-options="tag as tag for tag in tags" multiple="multiple"></select>
                             </div>
                         </div>
                     </form>

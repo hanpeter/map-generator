@@ -3,6 +3,7 @@
 var controller = function ($scope, PlaceFactory) {
     _.extend($scope, {
         places: [],
+        tags: ['brunch', 'dinner', 'dessert'],
         editPlace: null,
         showEditModal: function (place) {
             $scope.editPlace = _.clone(place);
