@@ -17,6 +17,7 @@
     "angular-route": "1.4.*",
     "body-parser": "latest",
     "bootstrap": "3.3.*",
+    "ui-select": "0.16.*",
     "express": "4.13.*",
     "jquery": "latest",
     "lodash": "latest",

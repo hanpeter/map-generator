@@ -3,7 +3,9 @@
 var controller = function ($scope, PlaceFactory) {
     _.extend($scope, {
         places: [],
-        tags: ['brunch', 'dinner', 'dessert'],
+        tags: function () {
+            return _.uniq(_.flatten(_.map($scope.places, function(place) { return place.tags; })));
+        },
         editPlace: null,
         showEditModal: function (place) {
             $scope.editPlace = _.clone(place);

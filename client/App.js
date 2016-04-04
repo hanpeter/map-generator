@@ -1,6 +1,6 @@
 'use strict';
 
-var App = angular.module('App', ['ngRoute']);
+var App = angular.module('App', ['ngRoute', 'ui.select']);
 App.controller('AppController', require('./controllers/AppController.js'));
 App.controller('ListController', require('./controllers/ListController.js'));
 App.controller('MapController', require('./controllers/MapController.js'));

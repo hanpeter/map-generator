@@ -70,7 +70,14 @@
                         <div class="form-group">
                             <label for="tags" class="col-sm-3 control-label">Tags</label>
                             <div class="col-sm-9">
-                                <select class="form-control" ng-model="editPlace.tags" ng-options="tag as tag for tag in tags" multiple="multiple"></select>
+                                <ui-select multiple tagging tagging-label="(new)" ng-model="editPlace.tags">
+                                    <ui-select-match>
+                                        {{$item}}
+                                    </ui-select-match>
+                                    <ui-select-choices repeat="tag in tags()">
+                                        <span ng-bind="tag"></span>
+                                    </ui-select-choices>
+                                </ui-select>
                             </div>
                         </div>
                     </form>
