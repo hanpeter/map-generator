@@ -1,11 +1,13 @@
-'use strict';
+(function () {
+    'use strict';
 
-var controller = function ($scope) {
-    _.extend($scope, {
-        appName: 'Vacation Planner'
-    });
-};
+    var controller = function ($scope) {
+        _.extend($scope, {
+            appName: 'Vacation Planner'
+        });
+    };
 
-controller.$inject = ['$scope'];
+    controller.$inject = ['$scope'];
 
-module.exports = controller;
+    module.exports = controller;
+})();

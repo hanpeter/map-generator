@@ -1,11 +1,13 @@
-'use strict';
+(function () {
+    'use strict';
 
-var controller = function ($scope) {
-    _.extend($scope, {
+    var controller = function ($scope) {
+        _.extend($scope, {
 
-    });
-};
+        });
+    };
 
-controller.$inject = ['$scope'];
+    controller.$inject = ['$scope'];
 
-module.exports = controller;
+    module.exports = controller;
+})();
