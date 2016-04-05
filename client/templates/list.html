@@ -20,7 +20,7 @@
                 <td>{{place.starttime}}</td>
                 <td>{{place.endtime}}</td>
                 <td>
-                    <a class="label label-info" ng-repeat="tag in place.tags" ng-href="#">
+                    <a class="label label-info" ng-repeat="tag in place.tags" ng-href="#/list/{{tag}}">
                         {{tag}}
                     </a>
                 </td>
@@ -75,7 +75,7 @@
                                         {{$item}}
                                     </ui-select-match>
                                     <ui-select-choices repeat="tag in tags()">
-                                        <span ng-bind="tag"></span>
+                                        {{tag}}
                                     </ui-select-choices>
                                 </ui-select>
                             </div>

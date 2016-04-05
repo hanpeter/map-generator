@@ -6,6 +6,10 @@ var provider = function ($routeProvider) {
             templateUrl: 'templates/list.html',
             controller: 'ListController'
         })
+        .when('/list/:tag', {
+            templateUrl: 'templates/list.html',
+            controller: 'ListController'
+        })
         .when('/map', {
             templateUrl: 'templates/map.html',
             controller: 'MapController'

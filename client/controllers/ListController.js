@@ -1,6 +1,8 @@
 'use strict';
 
-var controller = function ($scope, PlaceFactory) {
+var controller = function ($scope, $routeParams, PlaceFactory) {
+    var searchTag = $routeParams.tag;
+
     _.extend($scope, {
         places: [],
         tags: function () {
@@ -23,10 +25,17 @@ var controller = function ($scope, PlaceFactory) {
 
     PlaceFactory.getPlaces()
         .then(function (places) {
-            $scope.places = places;
+            if (searchTag) {
+                $scope.places = _.filter(places, function (place) {
+                    return place.tags.indexOf(searchTag) >= 0;
+                });
+            }
+            else {
+                $scope.places = places;
+            }
         });
 };
 
-controller.$inject = ['$scope', 'PlaceFactory'];
+controller.$inject = ['$scope', '$routeParams', 'PlaceFactory'];
 
 module.exports = controller;
