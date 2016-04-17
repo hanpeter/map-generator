@@ -7,7 +7,7 @@
         var data = [{
             id: 1,
             name: 'Blu Jam Cafe',
-            address: '7371 Melrose Ave. Los Angeles, CA',
+            address: '7371 Melrose Ave, Los Angeles, CA',
             starttime: '08:00:00',
             endtime: '16:00:00',
             yelp: 'http://www.yelp.com/biz/blu-jam-caf%C3%A9-los-angeles-2',
@@ -44,7 +44,7 @@
 
                 return _.clone(old, true);
             }
-        }
+        };
 
         return me;
     }
